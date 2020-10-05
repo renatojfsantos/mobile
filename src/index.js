@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, StatusBar } from 'react-native';
 
+import api from './services/api';
+
 // Não possuem valor semântico (significado)
 // Não possuem estilização própria
 // Todos componentes possuem por padrão "display: flex"
