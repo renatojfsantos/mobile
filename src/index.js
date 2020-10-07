@@ -15,7 +15,9 @@ export default function App() {
 
   useEffect(() => {
     api.get('projects').then(response => {
-      setProjects})
+      console.log(response.data);
+      setProjects(response.data);
+    });
   }, []);
 
   return (
