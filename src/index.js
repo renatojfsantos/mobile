@@ -15,7 +15,6 @@ export default function App() {
 
   useEffect(() => {
     api.get('projects').then(response => {
-      console.log(response.data);
       setProjects(response.data);
     });
   }, []);
@@ -24,8 +23,9 @@ export default function App() {
     <>
       <StatusBar barStyle="light-content" backgroundColor="#7159c1"/>
       <View style={styles.container}>
-        <Text style={styles.title}>Hello World</Text>
-      
+        {projects.map(project => (
+          <Text style={styles.project} key={project.id}>{project.title}</Text>
+        ))}
       </View>
     </>
   );
@@ -39,9 +39,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  title: {
+  project: {
     color: '#FFF',
-    fontSize: 32,
-    fontWeight: "bold",    
+    fontSize: 20,
   },
-})
+});
