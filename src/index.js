@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, FlatList, ScrollView, Text, StyleSheet, StatusBar } from 'react-native';
+import { SafeAreaView, FlatList, ScrollView, Text, StyleSheet, StatusBar, TouchableOpacity } from 'react-native';
 
 import api from './services/api';
 
@@ -31,6 +31,10 @@ export default function App() {
             <Text style={styles.project}>{project.title}</Text>
           )}
         />
+
+        <TouchableOpacity>
+          <Text>Adicionar projeto</Text>
+        </TouchableOpacity>
       </SafeAreaView>
     </>
   );
