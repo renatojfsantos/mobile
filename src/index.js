@@ -32,8 +32,8 @@ export default function App() {
           )}
         />
 
-        <TouchableOpacity>
-          <Text>Adicionar projeto</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Adicionar projeto</Text>
         </TouchableOpacity>
       </SafeAreaView>
     </>
